@@ -1,0 +1,136 @@
+/* GENERAL */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', monospace;
+  color: #eee;
+  height: 100%;
+  background-color: #000; /* fallback if image fails */
+}
+
+/* MAIN CONTAINER */
+.container {
+  min-height: 100vh;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* HEADER / HERO */
+
+
+
+
+header {
+  position: relative;
+  min-height: 400px;           /* ensures background shows */
+  padding: 50px 20px;
+  background-image: url('images/clown.jpg'); /* your clown image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+  margin-bottom: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      /* center text vertically */
+  align-items: center;          /* center text horizontally */
+
+
+/* LOGO IMAGE */
+.logo-img {
+  width: 200px;        /* adjust width as needed */
+  height: auto;        /* maintain aspect ratio */
+  display: block;      /* makes it block so margin works */
+  margin: 0 auto 20px; /* centers horizontally and adds bottom spacing */
+}
+
+  
+}
+
+/* Dark overlay for readability */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.6); /* dark semi-transparent layer */
+  z-index: 0;
+}
+
+header * {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* BOOK NOW BUTTON - toned down */
+.book-btn {
+  display: inline-block;
+  background-color: #800000;  /* dark red */
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s;
+  box-shadow: 0 0 5px #400000;
+}
+
+.book-btn:hover {
+  background-color: #a00000; /* slightly brighter on hover */
+  color: #fff;
+  box-shadow: 0 0 15px #a00000;
+}
+
+/* ABOUT SECTION */
+.about {
+  margin-top: 50px;
+}
+
+.about h2 {
+  font-family: 'Creepster', cursive;
+  color: #ff5555;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* PUZZLES SECTION */
+.puzzles {
+  margin-top: 50px;
+}
+
+.puzzles h2 {
+  font-family: 'Creepster', cursive;
+  color: #ff5555;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.puzzles ul {
+  list-style: none;
+  padding: 0;
+}
+
+.puzzles li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
