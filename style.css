@@ -16,10 +16,6 @@ body, html {
 }
 
 /* HEADER / HERO */
-
-
-
-
 header {
   position: relative;
   min-height: 400px;           /* ensures background shows */
@@ -37,17 +33,6 @@ header {
   flex-direction: column;
   justify-content: center;      /* center text vertically */
   align-items: center;          /* center text horizontally */
-
-
-/* LOGO IMAGE */
-.logo-img {
-  width: 200px;        /* adjust width as needed */
-  height: auto;        /* maintain aspect ratio */
-  display: block;      /* makes it block so margin works */
-  margin: 0 auto 20px; /* centers horizontally and adds bottom spacing */
-}
-
-  
 }
 
 /* Dark overlay for readability */
@@ -92,6 +77,30 @@ header p {
   background-color: #a00000; /* slightly brighter on hover */
   color: #fff;
   box-shadow: 0 0 15px #a00000;
+}
+
+/* NAVIGATION BUTTONS */
+.nav-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px; /* space between buttons */
+  justify-content: center; /* centers them horizontally */
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+.nav-btn {
+  display: inline-block;
+  background-color: #b22222; /* dark red theme */
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #8b0000; /* darker red on hover */
 }
 
 /* ABOUT SECTION */
