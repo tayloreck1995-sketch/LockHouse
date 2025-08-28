@@ -20,7 +20,7 @@ header {
   position: relative;
   min-height: 400px;           /* ensures background shows */
   padding: 50px 20px;
-  background-image: url('images/clown.jpg'); /* your clown image */
+  background-image: url('background.jpg'); /* your clown image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -109,6 +109,7 @@ header p {
 }
 
 .about h2 {
+  text-align: center;
   font-family: 'Creepster', cursive;
   color: #ff5555;
   font-size: 2rem;
@@ -117,6 +118,7 @@ header p {
 
 /* PUZZLES SECTION */
 .puzzles {
+  text-align: center;
   margin-top: 50px;
 }
 
