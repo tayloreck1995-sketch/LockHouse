@@ -1,4 +1,6 @@
-/* GENERAL */
+/* =========================
+   GENERAL
+========================= */
 body {
   margin: 0;
   background-color: #000;
@@ -23,7 +25,9 @@ p, li {
   color: #f0f0f0;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 header {
   padding: 25px;
   background: linear-gradient(180deg, #111 0%, #000 100%);
@@ -34,7 +38,9 @@ header img {
   margin-bottom: 15px;
 }
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 .nav-buttons {
   margin: 25px 0;
 }
@@ -49,6 +55,7 @@ header img {
   font-weight: 700;
   text-transform: uppercase;
   transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .nav-btn:hover {
@@ -58,7 +65,9 @@ header img {
   box-shadow: 0 0 15px #FFD700;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 section {
   margin: 50px auto;
   padding: 25px;
@@ -69,7 +78,9 @@ section {
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
   background-color: #000;
   border-top: 4px solid #FFD700;
@@ -83,7 +94,9 @@ footer p {
   font-weight: 400;
 }
 
-/* IMAGES */
+/* =========================
+   IMAGES
+========================= */
 img {
   border-radius: 10px;
   margin: 10px;
@@ -94,4 +107,38 @@ img {
 img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px #FFD700;
+}
+
+/* =========================
+   MOBILE FRIENDLY FIXES
+========================= */
+@media (max-width: 600px) {
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nav-btn {
+    display: block;
+    width: 80%;
+    margin: 6px 0;
+    font-size: 1rem;
+  }
+
+  section {
+    width: 95%;
+    padding: 15px;
+  }
+
+  img {
+    width: 90%;
+    height: auto;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
 }
