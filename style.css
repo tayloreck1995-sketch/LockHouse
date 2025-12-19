@@ -178,4 +178,12 @@ img:hover {
     width: 95%;
     padding: 15px;
   }
+
+  /* =========================
+   NAV SIZE OVERRIDE (FINAL FIX)
+========================= */
+.nav-buttons .nav-btn {
+  font-size: 1.35rem !important;
+  padding: 18px 34px !important;
+}
 }
