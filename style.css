@@ -9,7 +9,13 @@ body {
   text-align: center;
 }
 
-h1, h2, h3 {
+
+
+h1, 
+
+/*  Have any questions? Call us at  (661) 505-3566  */
+h2, h3 {
+  ;
   font-weight: 900;
   color: #FFD700;
   text-transform: uppercase;
@@ -18,11 +24,20 @@ h1, h2, h3 {
   margin: 10px 0;
 }
 
-p, li {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #f0f0f0;
+h4 
+.announcement {
+  color: #b30000;
+  font-family: "UnifrakturCook", "Creepster", "Georgia", serif;
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow:
+    0 0 5px #ff0000,
+    0 0 12px #8b0000,
+    2px 2px 3px #000;
+  margin: 10px 0;
 }
 
 /* =========================
@@ -169,7 +184,7 @@ img:hover {
     height: auto;
   }
 
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     font-size: 1.2rem;
     letter-spacing: 1px;
   }
