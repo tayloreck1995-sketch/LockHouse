@@ -91,73 +91,7 @@
     <p>Welcome to LockHouse Escape Room!
 We’re a passionate team dedicated to delivering unforgettable, fully immersive escape room experiences. Whether you’re planning a team-building event, a fun family puzzle-solving adventure, or an exciting first date, we’ve got you covered. Every one of our thoughtfully designed rooms challenges your wits, creativity, and teamwork, pushing you to think outside the box as the clock ticks down. Get ready to laugh, strategize, and put your cleverness to the test—because at LockHouse, the only way out is to escape.</p>
 
-    <!-- INTEGRATED COMMENT SECTION -->
-    <div class="comment-section-container">
-        <h2>Leave a Review / Comment</h2>
-        
-        <!-- Input Space -->
-        <div class="comment-box">
-            <textarea id="commentInput" placeholder="Tell us about your escape room experience..."></textarea>
-            <button onclick="addComment()">Post Comment</button>
-        </div>
-
-        <h2>User Comments</h2>
-        <!-- Backup Space Container -->
-        <div class="comment-list" id="commentList">
-            <!-- Built-in default backup comment -->
-            <div class="comment-item">
-                <p class="comment-text">Had an absolute blast in the haunted asylum room! Highly recommend! 👍</p>
-                <div class="action-buttons">
-                    <button class="like-btn" onclick="toggleLike(this)">👍 <span class="count">12</span></button>
-                    <button class="dislike-btn" onclick="toggleDislike(this)">👎 <span class="count">0</span></button>
-                </div>
-            </div>
-        </div>
-    </div>
-  </main>
-
-  <script>
-    // Function to handle adding a new comment dynamically
-    function addComment() {
-        const textarea = document.getElementById('commentInput');
-        const commentText = textarea.value.trim();
-        
-        if (commentText === "") {
-            alert("Please write something before posting!");
-            return;
-        }
-
-        const commentList = document.getElementById('commentList');
-
-        // Create HTML structure for the new comment
-        const newComment = document.createElement('div');
-        newComment.className = 'comment-item';
-        newComment.innerHTML = `
-            <p class="comment-text">${commentText}</p>
-            <div class="action-buttons">
-                <button class="like-btn" onclick="toggleLike(this)">👍 <span class="count">0</span></button>
-                <button class="dislike-btn" onclick="toggleDislike(this)">👎 <span class="count">0</span></button>
-            </div>
-        `;
-
-        // Append to the backup display list and clear input space
-        commentList.appendChild(newComment);
-        textarea.value = "";
-    }
-
-    // Function to handle Like clicks
-    function toggleLike(button) {
-        const countSpan = button.querySelector('.count');
-        let currentCount = parseInt(countSpan.innerText);
-        countSpan.innerText = currentCount + 1;
-    }
-
-    // Function to handle Dislike clicks
-    function toggleDislike(button) {
-        const countSpan = button.querySelector('.count');
-        let currentCount = parseInt(countSpan.innerText);
-        countSpan.innerText = currentCount + 1;
-    }
+    
   </script>
 </body>
 </html
