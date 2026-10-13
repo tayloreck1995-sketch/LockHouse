@@ -1,84 +1,176 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - LockHouse EscapeRoom</title>
+
+  <title>About & FAQ - LockHouse Escape Room</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Styling for the new comment section components */
+    .faq-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .faq-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .faq-category {
+      margin-bottom: 25px;
+    }
+
+    .faq-category h3 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+
+    .faq-item {
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .faq-item summary {
+      padding: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #222;
+      background: #f5f5f5;
+    }
+
+    .faq-item summary:hover {
+      background: #e8e8e8;
+    }
+
+    .faq-answer {
+      padding: 15px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .faq-answer a {
+      color: #0056b3;
+    }
+
+    .about-section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      line-height: 1.8;
+    }
+
     .comment-section-container {
-        margin-top: 40px;
-        padding-top: 20px;
-        border-top: 2px dashed #ccc;
-        max-width: 600px;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 2px dashed #ccc;
+      max-width: 600px;
     }
+
     .comment-box {
-        background: #fff;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        margin-bottom: 20px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
     }
+
     .comment-box textarea {
-        width: 100%;
-        height: 80px;
-        padding: 10px;
-        box-sizing: border-box;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-        font-family: sans-serif;
+      width: 100%;
+      height: 80px;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+      font-family: sans-serif;
     }
+
     .comment-box button {
-        margin-top: 10px;
-        padding: 8px 15px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
     }
+
     .comment-box button:hover {
-        background-color: #0056b3;
+      background-color: #0056b3;
     }
+
     .comment-list {
-        margin-top: 20px;
+      margin-top: 20px;
     }
+
     .comment-item {
-        background: #fff;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        margin-bottom: 10px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 10px;
     }
+
     .comment-text {
-        margin: 0 0 10px 0;
-        color: #333;
+      margin: 0 0 10px 0;
+      color: #333;
     }
+
     .action-buttons {
-        display: flex;
-        gap: 15px;
+      display: flex;
+      gap: 15px;
     }
-    .like-btn, .dislike-btn {
-        background: none;
-        color: #555;
-        border: 1px solid #ccc;
-        padding: 4px 10px;
-        font-size: 14px;
-        cursor: pointer;
-        border-radius: 4px;
+
+    .like-btn,
+    .dislike-btn {
+      background: none;
+      color: #555;
+      border: 1px solid #ccc;
+      padding: 4px 10px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
     }
-    .like-btn:hover { background-color: #e2f0d9; color: #385723; }
-    .dislike-btn:hover { background-color: #fce4d6; color: #c65911; }
+
+    .like-btn:hover {
+      background-color: #e2f0d9;
+      color: #385723;
+    }
+
+    .dislike-btn:hover {
+      background-color: #fce4d6;
+      color: #c65911;
+    }
+
+    @media (max-width: 600px) {
+      .faq-container,
+      .about-section {
+        padding: 12px;
+      }
+
+      .faq-item summary {
+        padding: 12px;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <header>
-    <img src="LHlogo.jpg" alt="LockHouse Logo" width="200" />
-    <h1>About LockHouse EscapeRoom</h1>
+    <img src="LHlogo.jpg" alt="LockHouse Logo" width="200">
+
+    <h1>About LockHouse Escape Room</h1>
 
     <nav class="nav-buttons">
       <a href="index.html" class="nav-btn">Home</a> |
@@ -88,10 +180,499 @@
   </header>
 
   <main>
-    <p>Welcome to LockHouse Escape Room!
-We’re a passionate team dedicated to delivering unforgettable, fully immersive escape room experiences. Whether you’re planning a team-building event, a fun family puzzle-solving adventure, or an exciting first date, we’ve got you covered. Every one of our thoughtfully designed rooms challenges your wits, creativity, and teamwork, pushing you to think outside the box as the clock ticks down. Get ready to laugh, strategize, and put your cleverness to the test—because at LockHouse, the only way out is to escape.</p>
 
-    
-  </script>
+    <!-- ABOUT SECTION -->
+
+    <section class="about-section">
+      <h2>Welcome to LockHouse Escape Room!</h2>
+
+      <p>
+        We're a passionate team dedicated to delivering unforgettable,
+        fully immersive escape room experiences. Whether you're planning
+        a team-building event, a fun family puzzle-solving adventure, or
+        an exciting first date, we've got you covered.
+      </p>
+
+      <p>
+        Every one of our thoughtfully designed rooms challenges your
+        wits, creativity, and teamwork, pushing you to think outside
+        the box as the clock ticks down. Get ready to laugh, strategize,
+        and put your cleverness to the test — because at LockHouse,
+        the only way out is to escape.
+      </p>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS -->
+
+    <section class="faq-container">
+      <h2>Frequently Asked Questions</h2>
+
+      <p>
+        Have questions about visiting LockHouse Escape Room?
+        Browse our frequently asked questions below.
+      </p>
+
+      <!-- BUSINESS HOURS AND LOCATION -->
+
+      <section class="faq-category">
+        <h3>Business Hours and Location</h3>
+
+        <details class="faq-item">
+          <summary>What are your business hours?</summary>
+          <div class="faq-answer">
+            <p>Our regular business hours are:</p>
+            <ul>
+              <li>Monday: 5:00 PM – 11:00 PM</li>
+              <li>Tuesday: Closed</li>
+              <li>Wednesday: 5:00 PM – 11:00 PM</li>
+              <li>Thursday: 5:00 PM – 11:00 PM</li>
+              <li>Friday: 4:00 PM – 11:00 PM</li>
+              <li>Saturday: 10:00 AM – 11:00 PM</li>
+              <li>Sunday: 11:00 AM – 6:00 PM</li>
+            </ul>
+            <p>
+              Hours may vary for special events, holidays, or scheduled bookings.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are you open on holidays?</summary>
+          <div class="faq-answer">
+            Yes! We may offer limited hours on holidays such as Christmas,
+            Thanksgiving, and New Year's Eve. Please contact us to confirm
+            our holiday hours.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What days are you closed?</summary>
+          <div class="faq-answer">
+            We are closed on New Year's Day. Please check with us for
+            any additional holiday closures.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Where are you located?</summary>
+          <div class="faq-answer">
+            18914 Soledad Canyon Road, Canyon Country, CA 91351.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What is your phone number?</summary>
+          <div class="faq-answer">
+            You can reach us at
+            <a href="tel:+16615053566">(661) 505-3566</a>.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is parking available?</summary>
+          <div class="faq-answer">Yes, parking is available.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How early should I arrive?</summary>
+          <div class="faq-answer">
+            We recommend arriving at least 15 minutes before your scheduled
+            reservation.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you accept walk-ins?</summary>
+          <div class="faq-answer">
+            Yes, we accept walk-ins! However, we cannot guarantee room
+            availability when you arrive. Rooms may already be booked or
+            in use, so we recommend making a reservation in advance.
+          </div>
+        </details>
+      </section>
+
+      <!-- RESERVATIONS AND BOOKINGS -->
+
+      <section class="faq-category">
+        <h3>Reservations and Bookings</h3>
+
+        <details class="faq-item">
+          <summary>How do I make a reservation?</summary>
+          <div class="faq-answer">
+            Visit our website and click the "Book Now" button. You will be
+            redirected to our booking site, where you can view availability
+            and reserve your escape room.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I book online or over the phone?</summary>
+          <div class="faq-answer">
+            Reservations should be made through our online booking site.
+            Phone inquiries are welcome for questions about party room
+            rentals and special events.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How far in advance should I book?</summary>
+          <div class="faq-answer">
+            Online reservations can be made up to one month in advance.
+            Please contact us if you have questions about bookings outside
+            this timeframe.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I change my reservation date or time?</summary>
+          <div class="faq-answer">
+            Reservation changes may be made up to 12 hours before your
+            scheduled booking. Please contact us for assistance.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What is your cancellation policy?</summary>
+          <div class="faq-answer">
+            Please contact us for information about cancellations and
+            applicable policies. Reservation changes may be made up to
+            12 hours before your scheduled booking.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What happens if I'm running late?</summary>
+          <div class="faq-answer">
+            Please call us as soon as possible if you are running late.
+            We can discuss your reservation and determine whether
+            accommodations are possible.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I add more people to my reservation?</summary>
+          <div class="faq-answer">
+            Yes, additional participants may be added when you arrive,
+            provided the room does not exceed its maximum capacity.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I book multiple rooms at once?</summary>
+          <div class="faq-answer">
+            Groups may reserve up to two rooms. Please call
+            <a href="tel:+16615053566">(661) 505-3566</a>
+            for information about larger groups or additional reservations.
+          </div>
+        </details>
+      </section>
+
+      <!-- GROUPON AND VOUCHERS -->
+
+      <section class="faq-category">
+        <h3>Groupon and Vouchers</h3>
+
+        <details class="faq-item">
+          <summary>Do you accept Groupon vouchers?</summary>
+          <div class="faq-answer">Yes! We accept Groupon vouchers.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>If I bought a Groupon, how do I use it?</summary>
+          <div class="faq-answer">
+            Please call us directly at
+            <a href="tel:+16615053566">(661) 505-3566</a>
+            to check availability and arrange your reservation. Bring your
+            Groupon voucher and have it ready to be scanned when you arrive.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I need a reservation before redeeming my Groupon?</summary>
+          <div class="faq-answer">
+            Yes. Contact us in advance to check availability and arrange
+            your reservation. Please wait until you arrive before redeeming
+            your Groupon so we can scan your voucher.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I show my Groupon on my phone?</summary>
+          <div class="faq-answer">
+            Yes! You may show your Groupon on your phone or bring a printed
+            copy, provided the voucher includes a scannable code or barcode.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What if my Groupon code isn't working?</summary>
+          <div class="faq-answer">
+            Please contact Groupon Customer Support for technical assistance.
+            Unfortunately, LockHouse Escape Room cannot modify Groupon
+            voucher prices or resolve technical issues within Groupon's system.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does my Groupon have an expiration date?</summary>
+          <div class="faq-answer">
+            Groupon vouchers may have expiration dates and other restrictions.
+            Please review the terms and conditions listed on your voucher
+            before purchasing.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I use multiple Groupons for one group?</summary>
+          <div class="faq-answer">
+            Only one Groupon may be used per group purchase. Please contact
+            us if you have questions about your group's eligibility.
+          </div>
+        </details>
+      </section>
+
+      <!-- PRICING AND PAYMENTS -->
+
+      <section class="faq-category">
+        <h3>Pricing and Payments</h3>
+
+        <details class="faq-item">
+          <summary>How much does an escape room cost per person?</summary>
+          <div class="faq-answer">
+            Pricing may vary depending on the room, date, and availability.
+            Please visit our online booking site for current prices.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you accept cash and credit cards?</summary>
+          <div class="faq-answer">
+            We accept debit cards and credit cards through our online
+            booking site and at the door. Cash is also accepted for
+            in-person payments. At this time, we do not accept PayPal.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can everyone in my group pay separately?</summary>
+          <div class="faq-answer">
+            Yes! Participants may pay separately. Please coordinate your
+            group's booking and payment arrangements in advance.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you offer group discounts?</summary>
+          <div class="faq-answer">
+            Group pricing may be available for parties of 10 or more.
+            Please call
+            <a href="tel:+16615053566">(661) 505-3566</a>
+            for more information.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you offer birthday party packages?</summary>
+          <div class="faq-answer">
+            Yes! Please call
+            <a href="tel:+16615053566">(661) 505-3566</a>
+            to ask about birthday party packages and available rental options.
+          </div>
+        </details>
+      </section>
+
+      <!-- ESCAPE ROOM EXPERIENCES -->
+
+      <section class="faq-category">
+        <h3>Escape Room Experiences</h3>
+
+        <details class="faq-item">
+          <summary>What escape rooms do you currently offer?</summary>
+          <div class="faq-answer">
+            We currently offer three escape room experiences:
+            <ul>
+              <li><strong>Mad Tortuga:</strong> A pirate-themed adventure.</li>
+              <li><strong>The Investigation:</strong> A mystery-solving experience.</li>
+              <li><strong>The Time Traveler's Study:</strong> An adventure centered around time travel.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How long does each escape room take?</summary>
+          <div class="faq-answer">
+            Each escape room has a 60-minute time limit. Participants also
+            have access to three clues to help them progress through the game.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How many people can participate in one room?</summary>
+          <div class="faq-answer">
+            The maximum group size varies by room. Please check our online
+            booking site for the participant limits listed for each experience.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do children need to be accompanied by an adult?</summary>
+          <div class="faq-answer">
+            Yes. Children under the age of 13 must be accompanied by
+            at least one adult.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do we need previous escape room experience?</summary>
+          <div class="faq-answer">
+            Not at all! No previous escape room experience is necessary.
+            Our games are designed for both beginners and experienced players.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are the escape rooms private?</summary>
+          <div class="faq-answer">
+            Yes. Our escape rooms are private experiences reserved for
+            your group when you book.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can we leave the room whenever we want?</summary>
+          <div class="faq-answer">
+            Yes. For safety and emergency purposes, participants may
+            leave the room at any time.
+          </div>
+        </details>
+      </section>
+
+      <!-- PARTIES AND SPECIAL EVENTS -->
+
+      <section class="faq-category">
+        <h3>Parties and Special Events</h3>
+
+        <details class="faq-item">
+          <summary>Can I host a birthday party at LockHouse?</summary>
+          <div class="faq-answer">
+            Absolutely! Call
+            <a href="tel:+16615053566">(661) 505-3566</a>
+            for information about birthday party packages, room rentals,
+            and reservation options.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you offer corporate team-building events?</summary>
+          <div class="faq-answer">
+            Yes! We offer options for special events, including team-building
+            activities and party room rentals. Please call us to discuss
+            your group's needs and available packages.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I bring food or drinks for a party?</summary>
+          <div class="faq-answer">
+            Yes! Food and drinks are permitted in designated birthday party
+            and event rental areas. However, food and drinks are not
+            permitted inside the escape rooms.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I reserve the facility for a private event?</summary>
+          <div class="faq-answer">
+            Yes, private event reservations may be available. Please contact
+            us to discuss availability and rental options.
+          </div>
+        </details>
+      </section>
+
+      <!-- RULES AND POLICIES -->
+
+      <section class="faq-category">
+        <h3>Rules and Policies</h3>
+
+        <details class="faq-item">
+          <summary>Can I take pictures or record videos inside the rooms?</summary>
+          <div class="faq-answer">
+            No. Photography and video recording are not permitted inside
+            our escape rooms to protect the puzzles and experience for
+            future participants.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are food and drinks allowed inside the escape rooms?</summary>
+          <div class="faq-answer">
+            No. Food and drinks are not permitted inside the escape rooms.
+            They may be allowed in designated party and event rental areas.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are alcohol or recreational drugs allowed on the premises?</summary>
+          <div class="faq-answer">
+            No. Alcohol and recreational drugs or substances, whether
+            legal or illegal, are prohibited on the premises.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are pets allowed?</summary>
+          <div class="faq-answer">
+            Unfortunately, pets are not permitted inside LockHouse Escape
+            Room. Please contact us regarding service animals and applicable
+            accessibility requirements.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Are the rooms wheelchair accessible?</summary>
+          <div class="faq-answer">
+            Accessibility varies by room, and some rooms may not meet ADA
+            accessibility requirements. Please call
+            <a href="tel:+16615053566">(661) 505-3566</a>
+            before booking so we can discuss your accessibility needs.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I need to sign a waiver before participating?</summary>
+          <div class="faq-answer">
+            Yes. All required waivers must be completed before participating.
+            You may be able to sign your waiver online during booking or
+            complete it in person before your experience begins.
+          </div>
+        </details>
+      </section>
+
+      <!-- CONTACT INFORMATION -->
+
+      <section class="faq-category">
+        <h3>Still Have Questions?</h3>
+
+        <p>
+          We're happy to help! Contact LockHouse Escape Room for questions
+          about reservations, Groupon vouchers, party rentals, or your
+          upcoming visit.
+        </p>
+
+        <p>
+          <strong>Phone:</strong>
+          <a href="tel:+16615053566">(661) 505-3566</a>
+        </p>
+
+        <p>
+          <strong>Address:</strong>
+          18914 Soledad Canyon Road, Canyon Country, CA 91351
+        </p>
+      </section>
+
+    </section>
+
+  </main>
+
 </body>
-</html
+</html>
